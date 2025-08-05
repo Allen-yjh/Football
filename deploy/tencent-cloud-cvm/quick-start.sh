@@ -1,13 +1,15 @@
 #!/bin/bash
 
-# 腾讯云服务器(CVM)快速启动脚本
+# 腾讯云服务器(CVM)快速启动脚本（CentOS 版）
 # 一键部署足球青训管理系统
 
 set -e
 
 echo "=========================================="
-echo "足球青训管理系统 - 云服务器快速启动"
+echo "足球青训管理系统 - 云服务器快速启动 (CentOS)"
 echo "=========================================="
+
+echo "请确保目标云服务器操作系统为 CentOS 7/8。"
 
 # 检查环境变量
 if [ -z "$TENCENT_SECRET_ID" ] || [ -z "$TENCENT_SECRET_KEY" ]; then
@@ -22,17 +24,14 @@ fi
 # 检查必要工具
 check_tools() {
     echo "检查必要工具..."
-    
     if ! command -v tccli &> /dev/null; then
         echo "安装腾讯云CLI..."
         pip install tccli
     fi
-    
     if ! command -v ssh &> /dev/null; then
         echo "错误: 请安装SSH客户端"
         exit 1
     fi
-    
     echo "工具检查完成"
 }
 
@@ -60,7 +59,6 @@ show_options() {
     echo "5) 退出"
     echo ""
     read -p "请输入选项 (1-5): " choice
-    
     case $choice in
         1)
             echo "开始一键部署..."
@@ -115,20 +113,12 @@ show_options() {
     esac
 }
 
-# 主函数
 main() {
     echo "欢迎使用足球青训管理系统部署工具！"
     echo ""
-    
-    # 检查工具
     check_tools
-    
-    # 显示成本信息
     show_cost_info
-    
-    # 显示选项
     show_options
 }
 
-# 执行主函数
 main "$@" 
