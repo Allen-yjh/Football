@@ -653,7 +653,8 @@ function App() {
   // 球员评估页面
   const renderPlayerAssessment = () => {
     return (
-      <div style={{ maxWidth: 1200, margin: '40px auto', padding: '0 20px' }}>
+      <div style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', minHeight: '100vh', padding: '60px 20px 80px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', background: 'rgba(255,255,255,0.95)', borderRadius: 24, padding: 32, boxShadow: '0 20px 60px rgba(0,0,0,0.1)' }}>
         <Title level={2} style={{ textAlign: 'center' }}>球员评估</Title>
         <Paragraph style={{ textAlign: 'center', fontSize: 16, marginBottom: 40 }}>
           AI驱动的足球技能分析，基于客观测试数据和主观评估
@@ -1164,6 +1165,7 @@ function App() {
             </div>
           )}
         </div>
+        </div>
       </div>
     );
   };
@@ -1171,7 +1173,8 @@ function App() {
   // 智能互动页面
   const renderAiInteraction = () => {
     return (
-      <div style={{ maxWidth: 1200, margin: '40px auto', padding: '0 20px' }}>
+      <div style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', minHeight: '100vh', padding: '60px 20px 80px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', background: 'rgba(255,255,255,0.95)', borderRadius: 24, padding: 32, boxShadow: '0 20px 60px rgba(0,0,0,0.1)' }}>
         <Title level={2} style={{ textAlign: 'center' }}>AI成长助手</Title>
         <Paragraph style={{ textAlign: 'center', fontSize: 16, marginBottom: 40 }}>
           AI驱动的训练计划制定、比赛表现评估和营养建议
@@ -1565,9 +1568,10 @@ function App() {
             </div>
           </Tabs.TabPane>
         </Tabs>
-    </div>
-  );
-};
+        </div>
+      </div>
+    );
+  };
 
   // 家长社区页面
   const renderTopicDetail = () => (
@@ -1873,7 +1877,8 @@ function App() {
   );
 
   const renderParentCommunity = () => (
-    <div style={{ maxWidth: 1000, margin: '40px auto', padding: '0 20px' }}>
+    <div style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', minHeight: '100vh', padding: '60px 20px 80px' }}>
+      <div style={{ maxWidth: 1000, margin: '0 auto', background: 'rgba(255,255,255,0.95)', borderRadius: 24, padding: 32, boxShadow: '0 20px 60px rgba(0,0,0,0.1)' }}>
       <Title level={2} style={{ textAlign: 'center' }}>家长社区</Title>
       <Paragraph style={{ textAlign: 'center', fontSize: 16, marginBottom: 40 }}>
         连接足球家长，分享经验，共同成长
@@ -2121,6 +2126,7 @@ function App() {
       
       <div style={{ textAlign: 'center', marginTop: 40 }}>
         <Button onClick={() => { setPresetTag(''); setPage('home'); }}>返回首页</Button>
+      </div>
       </div>
     </div>
   );
